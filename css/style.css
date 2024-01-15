@@ -7,7 +7,7 @@
 }
 
 .font-moulpali {
-  font-family: Moulpali;
+  font-family: "Moulpali" !important;
 }
 /* =======================================================
 *
@@ -458,6 +458,18 @@ h1, h2, h3, h4, h5, h6, figure {
 @media screen and (max-width: 768px) {
   #fh5co-counter {
     height: auto;
+  }
+
+  .event-col {
+
+    font-size: 12px !important;
+  }
+
+ .event-wrap h3 {
+   font-size: 14px !important;
+  }
+  .event-wrap p {
+    font-size: 12px !important;
   }
 }
 
@@ -1192,7 +1204,7 @@ form label {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 .fh5co-heading p {

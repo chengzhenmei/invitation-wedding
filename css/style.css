@@ -1861,13 +1861,13 @@ form label {
 
 /*# sourceMappingURL=style.css.map */
 
-
 .waviy {
   position: relative;
   -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(255, 255, 255, 0.859));
 
   -webkit-text-stroke: 0.5px #fff;
 }
+
 .waviy span {
   font-family: 'Moulpali';
   position: relative;
@@ -1879,6 +1879,7 @@ form label {
   animation-delay: calc(.1s * var(--i));
   
 }
+
 @keyframes waviy {
   0%,40%,100% {
     transform: translateY(0)
@@ -1886,4 +1887,44 @@ form label {
   20% {
     transform: translateY(-20px)
   }
+}
+
+
+.ifram-name {
+  width: 100%;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ifram-name .name-guest {
+    /* color: #ffd700; */
+    position: absolute;
+    top: 5px;
+}
+
+.gold {
+  text-transform: uppercase;
+  line-height:2;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(186,148,62,1) 0%, rgba(236,172,32,1) 20%, rgba(186,148,62,1) 39%, rgba(249,244,180,1) 50%, rgba(186,148,62,1) 60%, rgba(236,172,32,1) 80%, rgba(186,148,62,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;	
+  animation: shine 3s infinite;
+  background-size: 200%;
+  background-position: left;
+}
+
+@keyframes shine {
+  to{background-position: right}
+}
+
+.image-iframe-wedding {
+  max-width: 450px;
+	width: 70%;
+  height: 61px;
+  min-width: 260px;
 }

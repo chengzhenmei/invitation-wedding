@@ -15,7 +15,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Moulpali";
+  /* font-family: "Moulpali"; */
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -68,7 +68,7 @@ p {
 
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
-  font-family: "Moulpali";
+  font-family: "Wix Madefor Display,Dangrek";
   font-weight: 400;
   margin: 0 0 20px 0;
 }
@@ -420,6 +420,7 @@ h1, h2, h3, h4, h5, h6, figure {
   #fh5co-counter .event-wrap,
   #fh5co-event .event-wrap {
     margin-bottom: 10px;
+    padding: 8px !important;
   }
 }
 #fh5co-counter .event-wrap h3,
@@ -448,6 +449,7 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 50%;
   float: left;
   margin-bottom: 30px;
+  font-size: 14px;
 }
 
 #fh5co-counter {
@@ -1175,14 +1177,14 @@ form label {
 }
 
 .fh5co-heading {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
 }
 .fh5co-heading.fh5co-heading-sm {
   margin-bottom: 2em;
 }
 .fh5co-heading h2 {
-  font-size: 60px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-bottom: 20px;
   line-height: 1.5;
   font-weight: bold;
   color: #F14E95;
@@ -1190,13 +1192,14 @@ form label {
 }
 @media screen and (max-width: 768px) {
   .fh5co-heading h2 {
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
   color: #828282;
+  font-family: "Wix Madefor Display,Dangrek";
 }
 .fh5co-heading span {
   text-transform: uppercase;
@@ -1845,3 +1848,30 @@ form label {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(255, 255, 255, 0.859));
+
+  -webkit-text-stroke: 0.5px #fff;
+}
+.waviy span {
+  font-family: 'Moulpali';
+  position: relative;
+  display: inline-block;
+  color: #f14e95;
+  font-size: 28px;
+  text-transform: uppercase;
+  animation: waviy 2s infinite;
+  animation-delay: calc(.1s * var(--i));
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}

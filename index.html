@@ -605,6 +605,50 @@
 			fram.classList.add('hidden')
 		}
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+	<script>
+		var duration = 15 * 10000 ;
+		var animationEnd = Date.now() + duration;
+		var skew = 1;
+
+		const scalar = 10;
+		const pineapple = confetti.shapeFromText({ text: '💛', scalar });
+		var heart = confetti.shapeFromPath({
+			path: 'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -76,-76 -151,-151 -151,-227 0,-42 33,-75 75,-75 38,0 57,18 76,56z',
+			matrix: [0.03333333333333333, 0, 0, 0.03333333333333333, -5.566666666666666, -5.533333333333333]
+			});
+
+		function randomInRange(min, max) {
+			return Math.random() * (max - min) + min;
+		}
+
+		(function frame() {
+			var timeLeft = animationEnd - Date.now();
+			var ticks = Math.max(200, 500 * (timeLeft / duration));
+			skew = Math.max(0.8, skew - 0.001);
+
+			confetti({
+				particleCount: 1,
+				startVelocity: 0,
+				ticks: ticks,
+				origin: {
+					x: Math.random(),
+					// since particles fall down, skew start toward the top
+					y: (Math.random() * skew) - 0.2
+				},
+				colors: ['#ffffff'],
+				shapes: [heart],
+				gravity: randomInRange(0.4, 0.6),
+				scalar: randomInRange(0.5, 2),
+				drift: randomInRange(-0.4, 0.4),
+				colors: ['#f93963', '#a10864', '#ee0b93']
+			});
+
+			if (timeLeft > 0) {
+				requestAnimationFrame(frame);
+			}
+		}());
+	</script>
 
 </body>
 

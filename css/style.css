@@ -1939,9 +1939,16 @@ form label {
 
 .image-iframe-wedding {
   max-width: 450px;
-	width: 70%;
+	width: 88%;
   height: 61px;
   min-width: 260px;
+}
+
+@media screen and (max-width: 768px) {
+  .ifram-name .name-guest {
+    font-size: 20px;
+    top: 11px;
+  }
 }
 
 .color-infinite-animation {

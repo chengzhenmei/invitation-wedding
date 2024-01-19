@@ -79,9 +79,9 @@
 									<h1 class="font-khangkomutt color-infinite-animation">
 										ប៊ុនហុង
 										&amp; សោភ័ណ្ឌ</h1>
-									<h2 style="margin-top: 20px; color: #f4fdff;">សូមគោរពអញ្ជើញ</h2>
+									<h2 id="invite_title" style="margin-top: 20px; color: #f4fdff;">សូមគោរពអញ្ជើញ</h2>
 
-									<div class="ifram-name">
+									<div id="name_fram" class="ifram-name">
 										<img class="image-iframe-wedding" style="    background: #995f7b5c;"
 											src="images/frame_1.png" alt="">
 										<h3 id="guest_name" class="name-guest gold"></h3>
@@ -568,7 +568,17 @@
 	<script>
 		const params = new URLSearchParams(window.location.search)
 		const nameC = document.getElementById('guest_name')
-		nameC.innerText = params.get('gname')
+		const title = document.getElementById('invite_title');
+		const fram = document.getElementById('name_fram');
+		if(params.get('gname')) {
+			title.classList.remove('invisible')
+			fram.classList.remove('hidden')
+			nameC.innerText = params.get('gname')
+			
+		} else {
+			title.classList.add('invisible')
+			fram.classList.add('hidden')
+		}
 	</script>
 
 </body>

@@ -1952,7 +1952,7 @@ form label {
   line-height:2;
   text-align: center;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;	
+  -webkit-text-fill-color: transparent; 
 }
 
 @keyframes gradient {
@@ -1965,4 +1965,11 @@ form label {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
 }

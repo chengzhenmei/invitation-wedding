@@ -1980,3 +1980,7 @@ form label {
 .invisible {
   visibility: hidden;
 }
+
+.video-container  video{
+	max-height: 100vh;
+}
